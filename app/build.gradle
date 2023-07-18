@@ -1,0 +1,59 @@
+apply plugin: 'com.android.application'
+
+android {
+    def version = ("220" + new Date().format("yyMMdd")).toInteger()
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.wiseasy.cashier.demo"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode version
+        versionName "CashierDemo_2.04_00a_" + version.toString().substring(3, 9) + "01"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            applicationIdSuffix 'testTag'
+        }
+    }
+
+    //执行lint检查，有任何的错误或者警告提示，都会终止构建，我们可以将其关掉。
+    lintOptions {
+        abortOnError false
+    }
+    android {
+        android.applicationVariants.all {
+            variant ->
+                variant.outputs.all {
+                    //在这里修改apk文件名
+                    outputFileName = versionName + ".apk"
+                }
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+
+    implementation files('libs/emvprocess_2.2.11.230427.jar')
+    implementation files('libs/SDK4BaseBinderV2.2.29.jar')
+    implementation files('libs/SDK4EmvBinderV3.2.16.jar')
+    implementation files('libs/SDK4KeyManagerBinderV2.2.18.jar')
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    // AS默认配置，如果如果没有记得加上
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    androidTestImplementation 'com.android.support.test.uiautomator:uiautomator-v18:2.1.2'
+    // Gson
+    api 'com.google.code.gson:gson:2.8.6'
+
+
+}

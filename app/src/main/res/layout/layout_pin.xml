@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="输入联机pin\n剩余次数 : 1 "
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="123456789456122"
+            android:textColor="#9b9b9b"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:gravity="center_horizontal"
+            android:text="$123"
+            android:textColor="#000"
+            android:textSize="30sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/base_select_btn_light_gray_bg"
+            android:gravity="center"
+            android:paddingBottom="7dp"
+            android:textColor="#000"
+            android:textColorHint="#9B9B9B"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:background="#e6e6e6"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button1"
+                style="@style/key_pad_num_button"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/button2"
+                style="@style/key_pad_num_button"
+                android:text="2" />
+
+            <Button
+                android:id="@+id/button3"
+                style="@style/key_pad_num_button"
+                android:text="3" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button4"
+                style="@style/key_pad_num_button"
+                android:text="4" />
+
+            <Button
+                android:id="@+id/button5"
+                style="@style/key_pad_num_button"
+                android:text="5" />
+
+            <Button
+                android:id="@+id/button6"
+                style="@style/key_pad_num_button"
+                android:text="6" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button7"
+                style="@style/key_pad_num_button"
+                android:text="7" />
+
+            <Button
+                android:id="@+id/button8"
+                style="@style/key_pad_num_button"
+                android:text="8" />
+
+            <Button
+                android:id="@+id/button9"
+                style="@style/key_pad_num_button"
+                android:text="9" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                style="@style/key_pad_num_button"
+                android:text="Cancel"
+                android:textSize="28sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_clean"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/base_select_btn_little_cancel_bg"
+                android:text="Clear"
+                android:textColor="#fff"
+                android:textSize="22sp" />
+
+            <Button
+                android:id="@+id/button0"
+                style="@style/key_pad_num_button"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/btn_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/base_select_btn_little_ok_bg"
+                android:text="OK"
+                android:textColor="#fff"
+                android:textSize="22sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
